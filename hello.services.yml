@@ -1,0 +1,8 @@
+services:
+  hello.hello_service:
+    class: Drupal\hello\HelloService
+  hello_event_subscriber:
+    class: Drupal\hello\EventSubscriber\HelloEventSubscriber
+    arguments: ['@current_user']
+    tags: #Our Service Tags
+      - {name: event_subscriber}

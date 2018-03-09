@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme
+ */
+function hello_theme() {
+  $theme['say_hello'] = array(
+      'variables' => array('name'=>null),
+      'template' => 'say_hello',
+  );
+
+  return $theme;
+}

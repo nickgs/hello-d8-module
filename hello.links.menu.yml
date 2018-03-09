@@ -1,0 +1,4 @@
+hello.sayHi:
+  title: "Say Hi"
+  route_name: hello.sayHi
+  menu_name: tools

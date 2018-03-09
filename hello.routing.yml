@@ -1,0 +1,22 @@
+hello.sayHi:
+  path: '/hello/{name}'
+  defaults:
+    _controller: '\Drupal\hello\Controller\HelloController::sayHi'
+    name: 'Ol'
+  requirements:
+    _permission: 'request hello'
+    name: ^N[a-z]+
+
+hello.requestHi:
+  path: '/hello/request'
+  defaults:
+    _form: '\Drupal\hello\Form\HelloRequestForm'
+  requirements:
+    _permission: 'request hello'
+
+hello.configHi:
+  path: '/hello/config'
+  defaults:
+    _form: '\Drupal\hello\Form\HelloConfigForm'
+  requirements:
+    _permission: 'access content'
